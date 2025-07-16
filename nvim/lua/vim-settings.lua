@@ -18,6 +18,8 @@ vim.opt.signcolumn = "yes:1"
 vim.opt.wrap = true
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
+vim.opt.colorcolumn = { 80 }
+vim.cmd("hi ColorColumn guibg=#212526")
 
 -- qol 
 vim.opt.incsearch = true
@@ -33,6 +35,7 @@ vim.keymap.set('n', '<J>', "mzJ`z")
 -- easier highlight traverse
 vim.keymap.set('n', "n", "nzzzv")
 vim.keymap.set('n', "N", "Nzzzv")
+vim.keymap.set('n', "<leader>*", ":noh<CR>")
 
 -- no quit?
 vim.keymap.set('n', "Q", "<nop>")
