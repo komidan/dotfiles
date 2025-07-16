@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "{{ if .WSL }}<#e8c98b>wsl</> {{ end }}<#6c6b6e>[</>{{ .UserName }}@{{ .HostName }}",
+          "foreground": "#f3f2c3",
+          "type": "session",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "folder_icon": "..",
+            "home_icon": "home",
+            "style": "agnoster_short"
+          },
+          "template": " {{ .Path }}<#6c6b6e>]</> ",
+          "foreground": "#ceaaf0",
+          "type": "path",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "branch_icon": "",
+            "cache_duration": "none"
+          },
+          "template": "<#525252>(<#E8CC97>\ue725<#5f4fd1> {{ .HEAD }}<#525252>)</>",
+          "foreground": "#748ed6",
+          "type": "git",
+          "style": "plain"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "<#5f5063>{{ .Venv }} ({{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }})</>",
+          "type": "python",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "{{ if gt .Code 0 }}<#e66a7a>{{ else }}</>{{ end }}\u25b8",
+          "foreground": "#8888888",
+          "type": "text",
+          "style": "plain"
+        }
+      ],
+      "newline": true 
+    }
+  ],
+  "version": 3,
+  "final_space": true
+}
