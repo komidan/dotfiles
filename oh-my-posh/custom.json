@@ -18,7 +18,7 @@
           "properties": {
             "cache_duration": "none",
             "folder_icon": "..",
-            "home_icon": "home",
+            "home_icon": "\udb84\udcb5",
             "style": "agnoster_short"
           },
           "template": " {{ .Path }}<#6c6b6e>]</> ",
