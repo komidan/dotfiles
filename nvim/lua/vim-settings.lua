@@ -14,17 +14,17 @@ vim.opt.smartindent = true
 -- visual 
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.api.nvim_set_hl(0, "CursorLineNr", { bg="#222627" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { bg="#262927" })
 vim.opt.signcolumn = "yes:1"
 vim.opt.wrap = true
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = { 80 }
-vim.api.nvim_set_hl(0, "ColorColumn", { bg="#222627" })
+vim.api.nvim_set_hl(0, "ColorColumn", { bg="#262927" })
 vim.opt.showmatch = true
 vim.opt.matchtime = 2
-vim.opt.cursorline = true
-vim.api.nvim_set_hl(0, "CursorLine", { bg="#222627" })
+vim.opt.cursorline = true 
+vim.api.nvim_set_hl(0, "CursorLine", { bg="#262927" })
 
 -- qol 
 vim.opt.incsearch = true

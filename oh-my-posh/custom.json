@@ -9,7 +9,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{ if .WSL }}<#e8c98b>wsl</> {{ end }}<#6c6b6e>[</>{{ .UserName }}@{{ .HostName }}",
+          "template": "{{ if .WSL }}<#e8c98b>wsl</> {{ end }}<#6c6b6e></>{{ .UserName }}@{{ .HostName }}",
           "foreground": "#f3f2c3",
           "type": "session",
           "style": "plain"
@@ -18,10 +18,10 @@
           "properties": {
             "cache_duration": "none",
             "folder_icon": "..",
-            "home_icon": "\udb84\udcb5",
+            "home_icon": "\udb84\udcb5 ",
             "style": "agnoster_short"
           },
-          "template": " {{ .Path }}<#6c6b6e>]</> ",
+          "template": " {{ .Path }}<#6c6b6e></> ",
           "foreground": "#ceaaf0",
           "type": "path",
           "style": "plain"
@@ -31,7 +31,7 @@
             "branch_icon": "",
             "cache_duration": "none"
           },
-          "template": "<#525252>(<#E8CC97>\ue725<#5f4fd1> {{ .HEAD }}<#525252>)</>",
+          "template": "<#525252>(<#E8CC97>\ue725<#5f4fd1> {{ .HEAD }}<#525252>)</> ",
           "foreground": "#748ed6",
           "type": "git",
           "style": "plain"
@@ -60,7 +60,7 @@
           "style": "plain"
         }
       ],
-      "newline": true 
+      "newline": false 
     }
   ],
   "version": 3,

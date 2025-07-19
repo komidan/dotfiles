@@ -35,7 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Background
-exec_always --no-startup-id nitrogen --set-zoom-fill ~/Pictures/wallpapers/bg5.jpg --head=0
+exec_always --no-startup-id nitrogen --set-zoom-fill ~/Pictures/wallpapers/bg5.jpg --head=-1 --save
 
 # Set Display Size 
 exec_always --no-startup-id xrandr --output Virtual1 --mode 1920x1080
@@ -130,7 +130,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "0"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -191,13 +191,13 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # custom
-default_border pixel
-title_align center
+default_border pixel 2
+default_floating_border pixel 2
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #ceaaf0   #79648d
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #000000 #222222 #888888 #292d2e   #444444
+client.focused          #4c7899 #575161 #ffffff #ceaaf0   #444444
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #575161
+client.unfocused        #000000 #575161 #222222 #292d2e   #1d2021
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
