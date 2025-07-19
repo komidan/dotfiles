@@ -31,14 +31,13 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 24
 vim.opt.updatetime = 100 -- (swapfile is off)
 vim.opt.lazyredraw = true
-vim.opt.timeoutlen = 100
-vim.opt.ttimeoutlen = 0
+vim.opt.timeoutlen = 700
 vim.opt.autoread = true
 vim.opt.autowrite = false
 vim.opt.iskeyword:append("-")
 vim.opt.hidden = true
 vim.opt.errorbells = false
-vim.opt.selection = "exclusive"
+vim.opt.selection = "inclusive"
 vim.opt.clipboard:append("unnamedplus")
 
 -- keybindings
