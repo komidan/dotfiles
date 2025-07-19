@@ -49,7 +49,7 @@ vim.keymap.set('n', '<J>', "mzJ`z")
 -- easier highlight traverse
 vim.keymap.set('n', "n", "nzzzv")
 vim.keymap.set('n', "N", "Nzzzv")
-vim.keymap.set('n', "<leader>*", ":noh<CR>")
+vim.keymap.set('n', "ff", ":noh<CR>")
 
 -- no quit?
 vim.keymap.set('n', "Q", "<nop>")
