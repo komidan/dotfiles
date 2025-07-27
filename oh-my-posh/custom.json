@@ -18,7 +18,7 @@
           "properties": {
             "cache_duration": "none",
             "folder_icon": "..",
-            "home_icon": "\udb84\udcb5 ",
+            "home_icon": "~",
             "style": "agnoster_short"
           },
           "template": " {{ .Path }}<#6c6b6e></> ",
@@ -31,7 +31,7 @@
             "branch_icon": "",
             "cache_duration": "none"
           },
-          "template": "<#525252>(<#E8CC97>\ue725<#5f4fd1> {{ .HEAD }}<#525252>)</> ",
+          "template": "<#525252>(<#E8CC97>\ue725<#5f4fd1> {{ .HEAD }}<#525252>)</>",
           "foreground": "#748ed6",
           "type": "git",
           "style": "plain"
