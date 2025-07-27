@@ -15,7 +15,7 @@ return {
                 folds = false,
             },
             inverse = false,
-            contrast = 'hard'
+            contrast = 'hard',
         })
         vim.cmd("colorscheme gruvbox")
     end

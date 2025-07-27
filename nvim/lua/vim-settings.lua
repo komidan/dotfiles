@@ -14,17 +14,14 @@ vim.opt.smartindent = true
 -- visual 
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.api.nvim_set_hl(0, "CursorLineNr", { bg="#262927" })
 vim.opt.signcolumn = "yes:1"
 vim.opt.wrap = true
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = { 80 }
-vim.api.nvim_set_hl(0, "ColorColumn", { bg="#262927" })
 vim.opt.showmatch = true
 vim.opt.matchtime = 2
-vim.opt.cursorline = true 
-vim.api.nvim_set_hl(0, "CursorLine", { bg="#262927" })
+vim.opt.cursorline = true
 
 -- qol 
 vim.opt.incsearch = true
@@ -44,7 +41,7 @@ vim.opt.clipboard:append("unnamedplus")
 vim.g.mapleader = " "
 
 -- i forgor
-vim.keymap.set('n', '<J>', "mzJ`z")
+vim.keymap.set('n', "<J>", "mzJ`z")
 
 -- easier highlight traverse
 vim.keymap.set('n', "n", "nzzzv")
@@ -52,13 +49,14 @@ vim.keymap.set('n', "N", "Nzzzv")
 vim.keymap.set('n', "ff", ":noh<CR>")
 
 -- unnamed register dumb, use zero register for pasting
-vim.keymap.set('n', '<C-p>', '"0p"')
+vim.keymap.set('n', "<C-p>", '"0p"')
+vim.keymap.set('v', "<C-p>", '"0p"')
 
 -- no quit?
 vim.keymap.set('n', "Q", "<nop>")
 
 -- lsp completion
-vim.keymap.set('i', '<c-space', function() vim.lsp.completion.get() end)
+vim.keymap.set('i', "<c-space", function() vim.lsp.completion.get() end)
 
 -- center cursor after page up/down
 vim.keymap.set('n', "<C-d>", "<C-d>zz")
