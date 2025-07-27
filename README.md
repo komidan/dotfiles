@@ -13,8 +13,8 @@ PROGRAMS:
 
 ```
 TODO:
-    [ ] Search more through kitty documentation.
-    [ ] (?) Fix OH-MY-POSH configuration, feels buggy with kitty at
-        the moment.
-    [ ] Polybar maybe fix double-space between "ram  N%" and "cpu  N%"?
+    - Search more through kitty documentation.
+    - (?) Fix OH-MY-POSH configuration, feels buggy with kitty at
+      the moment.
+    - Polybar maybe fix double-space between "ram  N%" and "cpu  N%"?
 ```
