@@ -31,7 +31,7 @@
             "branch_icon": "",
             "cache_duration": "none"
           },
-          "template": "<#525252>(<#E8CC97>\ue725<#5f4fd1> {{ .HEAD }}<#525252>)</>",
+          "template": "<#525252>(<#5f4fd1>{{ .HEAD }}<#525252>)</>",
           "foreground": "#748ed6",
           "type": "git",
           "style": "plain"
@@ -55,7 +55,7 @@
             "cache_duration": "none"
           },
           "template": "{{ if gt .Code 0 }}<#e66a7a>{{ else }}</>{{ end }}\u25b8",
-          "foreground": "#8888888",
+          "foreground": "#FFFFFFFF",
           "type": "text",
           "style": "plain"
         }

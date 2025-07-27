@@ -4,11 +4,11 @@ DOTFILES="$HOME/dotfiles"
 LOG_FILE="./log.txt"
 
 log() {
-    echo "[$(date '+%d-%b-%Y %H:%M:%S')] $1" | tee -a $LOG_FILE
+    echo "[$(date '+%d-%b-%Y %H:%M:%S')] $1" | tee -a $LOG_FILE 
 }
 
 if ! [ -d "$DOTFILES" ]; then
-    log "(FAIL) dotfiles dir needs to be in '$HOME/"
+    log "dotfiles dir needs to be in '$HOME/'"
     exit 1
 fi
 
@@ -19,25 +19,33 @@ DIRS=(
     "nvim:$DOTFILES/nvim:$HOME/.config/nvim"
     "oh-my-posh:$DOTFILES/oh-my-posh:$HOME/.config/oh-my-posh"
     "polybar:$DOTFILES/polybar:$HOME/.config/polybar"
+    "tmux:$DOTFILES/tmux:$HOME/.config/tmux"
 )
 
 for conf in "${DIRS[@]}"; do
-    IFS=":" read -r PROGRAM SRC DST <<< "$conf"
+    IFS=: read -r PROGRAM SRC DST <<< "$conf"
 
     if ! command -v "$PROGRAM" >/dev/null 2>&1; then
-        log "program '$PROGRAM' not found or not installed"
+        log "[$PROGRAM]"
+        log "not found or not installed, skipping"
+        log ""
         continue
     fi
 
-    log "[ $PROGRAM ] "
+    log "[$PROGRAM]"
 
-    if [ -e "$DST" ] || [ -L "$DST" ]; then
-        log "backing up (${DST}_backup)"
-        mv $DST ${DST}_backup
+    if [ -L "$DST" ]; then
+        log "removing old symlink '$DST'"
+        rm "$DST"
+    elif [ -e "$DST" ]; then
+        BACKUP="${DST}_backup_$(date +%s)"
+        log "backup '$DST' -> '$BACKUP'"
+        mv "$DST" "$BACKUP"
     fi
 
+    # link
     ln -s "$SRC" "$DST"
-    log "linking $SRC -> $DST)"
 
+    log "linking '$SRC' -> '$DST'"
     log ""
 done
