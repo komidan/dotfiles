@@ -6,6 +6,7 @@ return {
         "nvim-tree/nvim-web-devicons",
         "MunifTanjim/nui.nvim",
     },
+    lazy = false,
     config = function()
         local config = require('neo-tree')
         config.setup({
@@ -18,9 +19,9 @@ return {
                     end
                 },
             },
-            window = {
-                position = "right",
-                width = 30,
+            source_selector = {
+                winbar = false,
+                statusline = false,
             },
             filesystem = {
                 filtered_items = {
@@ -31,7 +32,9 @@ return {
                 group_empty_dirs = true
             }
         })
-        vim.keymap.set('n', "<C-n>", ':Neotree reveal<CR>')
+        vim.keymap.set('n', "<C-n>", ':Neotree toggle reveal float<CR>')
+        vim.keymap.set('n', "<C-b>", ':Neotree reveal float buffers<CR>')
+        vim.keymap.set('n', "<C-g>", ':Neotree toggle right git_status<CR>')
     end
 }
 
