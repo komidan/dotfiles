@@ -212,3 +212,6 @@ gaps right -2
 
 # Start Polybar
 exec_always ~/.config/polybar/launch.sh &
+
+# Keyboard Stuffs
+exec_always xset r rate 300 35 

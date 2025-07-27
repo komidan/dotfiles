@@ -51,6 +51,9 @@ vim.keymap.set('n', "n", "nzzzv")
 vim.keymap.set('n', "N", "Nzzzv")
 vim.keymap.set('n', "ff", ":noh<CR>")
 
+-- unnamed register dumb, use zero register for pasting
+vim.keymap.set('n', '<C-p>', '"0p"')
+
 -- no quit?
 vim.keymap.set('n', "Q", "<nop>")
 
