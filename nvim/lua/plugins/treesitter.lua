@@ -10,6 +10,7 @@ return {
             ensure_installed = {
                 -- langs
                 "c",
+                "cpp",
                 "python",
                 "lua",
 
@@ -24,12 +25,10 @@ return {
             },
             highlight = {
                 enable = true,
-                disable = { "c", "rust" },
-
                 additional_vim_regex_highlighting = false,
             },
             indent = {
-                enable = false,
+                enable = true,
             },
         })
     end

@@ -46,7 +46,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<#5f5063>{{ .Venv }} ({{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }})</>",
+          "template": "<#5f5063> ({{ .Venv }}{{ if .Error }}{{ .Error }}{{ else }} {{ .Full }}{{ end }})</>",
           "type": "python",
           "style": "powerline"
         },

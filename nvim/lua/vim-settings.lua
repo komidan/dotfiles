@@ -8,8 +8,8 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-vim.opt.autoindent = true
-vim.opt.smartindent = true
+vim.opt.autoindent = false
+vim.opt.smartindent = false
 
 -- visual 
 vim.opt.nu = true
@@ -36,6 +36,13 @@ vim.opt.hidden = true
 vim.opt.errorbells = false
 vim.opt.selection = "inclusive"
 vim.opt.clipboard:append("unnamedplus")
+
+-- autocomplete
+vim.opt.completeopt = {
+    "noselect",
+    "noinsert",
+    "menuone",
+}
 
 -- keybindings
 vim.g.mapleader = " "
@@ -65,3 +72,6 @@ vim.keymap.set('n', "<C-u>", "<C-u>zz")
 -- vscode like line movement
 vim.keymap.set('v', "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', "K", ":m '<-2<CR>gv=gv")
+
+-- split
+vim.keymap.set('n', "<C-\\>", ":vsplit<CR>")

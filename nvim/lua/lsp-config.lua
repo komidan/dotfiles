@@ -1,4 +1,5 @@
 
+-- Language Server Protocol
 require("lsp.pylsp")
 require("lsp.lua_ls")
 require("lsp.rust")
@@ -12,7 +13,10 @@ vim.lsp.enable({
 })
 
 vim.diagnostic.config({
-    virtual_text = { spacing = 0, prefix = "-" },
+    virtual_text = {
+        spacing = 0,
+        prefix = "-"
+    },
     update_in_insert = true,
     underline = true,
     severity_sort = true,
