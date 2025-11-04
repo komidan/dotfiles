@@ -45,7 +45,6 @@ PACKAGES=(
 
 	unzip
 	zip
-	# rar
 	unrar-free
 
 	pavucontrol
@@ -61,6 +60,7 @@ PACKAGES=(
     pass             # password storage
 	timeshift        # system store point management
 	qimgv            # image viewer (optional video support?)
+    nitrogen         # background images
 	# gimp
 	# inkscape
 	# libreoffice (?)

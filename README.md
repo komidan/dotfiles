@@ -1,5 +1,7 @@
 ### Dotfiles
 
+# cool dotfiles for minimal debian installation
+
 PROGRAMS:
 - i3           (window manager)
 - i3lock-fancy (better lock-screen)
@@ -8,11 +10,3 @@ PROGRAMS:
 - oh-my-posh   (prompt theme engine)
 - nitrogen     (sets background for i3)
 - nvim >v11    (text/code editor)
-
-```
-TODO:
-    - Search more through kitty documentation.
-    - (?) Fix OH-MY-POSH configuration, feels buggy with kitty at
-      the moment.
-    - Polybar maybe fix double-space between "ram  N%" and "cpu  N%"?
-```

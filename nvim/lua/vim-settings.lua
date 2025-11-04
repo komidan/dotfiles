@@ -63,7 +63,11 @@ vim.keymap.set('v', "<C-p>", '"0p')
 vim.keymap.set('n', "Q", "<nop>")
 
 -- lsp completion
-vim.keymap.set('i', "<c-space", function() vim.lsp.completion.get() end)
+vim.keymap.set('i', "<leader><leader>", function() vim.lsp.completion.get() end)
+-- ?
+vim.keymap.set("i", "<leader><leader>", function()
+    require("blink.cmp").show()
+end)
 
 -- center cursor after page up/down
 vim.keymap.set('n', "<C-d>", "<C-d>zz")
@@ -74,4 +78,4 @@ vim.keymap.set('v', "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', "K", ":m '<-2<CR>gv=gv")
 
 -- split
-vim.keymap.set('n', "<C-\\>", ":vsplit<CR>")
+vim.keymap.set('n', "<C-\\>", ":vsplit<CR><C-w>w")
