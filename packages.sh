@@ -61,6 +61,7 @@ PACKAGES=(
 	timeshift        # system store point management
 	qimgv            # image viewer (optional video support?)
     nitrogen         # background images
+    rofi
 	# gimp
 	# inkscape
 	# libreoffice (?)
