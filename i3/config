@@ -35,7 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --pixelate -
 exec --no-startup-id nm-applet
 
 # Background
-exec_always --no-startup-id nitrogen --set-auto "~/Pictures/test.png" --save
+exec_always --no-startup-id nitrogen --set-auto "~/Pictures/final.png" --save
 
 # Set Display Size 
 exec_always --no-startup-id xrandr --output Virtual1 --mode 1920x1080
@@ -161,7 +161,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'leave dat i3 sesh bruvva?' -B 'hells yeah brother!' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
