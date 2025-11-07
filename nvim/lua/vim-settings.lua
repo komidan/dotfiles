@@ -34,6 +34,7 @@ vim.opt.autowrite = false
 vim.opt.iskeyword:append("-")
 vim.opt.hidden = true
 vim.opt.errorbells = false
+vim.opt.visualbell = true
 vim.opt.selection = "inclusive"
 vim.opt.clipboard:append("unnamedplus")
 
@@ -62,10 +63,8 @@ vim.keymap.set('v', "<C-p>", '"0p')
 -- no quit?
 vim.keymap.set('n', "Q", "<nop>")
 
--- lsp completion
-vim.keymap.set('i', "<leader><leader>", function() vim.lsp.completion.get() end)
--- ?
-vim.keymap.set("i", "<leader><leader>", function()
+-- lsp completion popup 
+vim.keymap.set("i", "<C-p>", function()
     require("blink.cmp").show()
 end)
 

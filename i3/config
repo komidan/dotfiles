@@ -35,7 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --pixelate -
 exec --no-startup-id nm-applet
 
 # Background
-exec_always --no-startup-id nitrogen --set-auto "~/Pictures/final.png" --save
+exec --no-startup-id nitrogen --restore
 
 # Set Display Size 
 exec_always --no-startup-id xrandr --output Virtual1 --mode 1920x1080
@@ -195,7 +195,7 @@ default_border pixel 2
 default_floating_border pixel 2
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #575161 #ffffff #ceaaf0   #444444
+client.focused          #4c7899 #575161 #ffffff #777777   #444444
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #575161
 client.unfocused        #000000 #575161 #222222 #292d2e   #1d2021
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
