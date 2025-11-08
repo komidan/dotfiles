@@ -52,6 +52,7 @@ PACKAGES=(
 	pulseaudio-utils
 
 	ripgrep
+    cloc
 	fd-find          # modern 'find' command
 	fzf              # fuzzy file search
 	bat              # cat + syntax highlighting
