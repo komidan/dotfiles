@@ -18,7 +18,9 @@ return {
             -- C-k: Toggle signature help (if signature.enabled = true)
             --
             -- See :h blink-cmp-config-keymap for defining your own keymap
-            keymap = { preset = 'enter' },
+            keymap = { 
+                preset = 'enter',
+            },
 
             appearance = {
                 -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -32,16 +34,27 @@ return {
                     show_on_keyword = false,
                     show_on_trigger_character = false,
 
-                    show_on_backspace = false,
-                    show_on_backspace_in_keyword = false,
+                    show_on_backspace = true,
+                    show_on_backspace_in_keyword = true,
                     show_on_backspace_after_accept = true,
                     show_on_backspace_after_insert_enter = true,
+                },
+
+                accept = {
+                    auto_brackets = {
+                        enabled = true,
+                    },
                 },
 
                 -- menu = {
                 --     auto_show = false,
                 --     auto_show_delay_ms = 500,
                 -- },
+
+                documentation = {
+                    auto_show = true,
+                    auto_show_delay_ms = 150,
+                },
 
                 list = {
                     selection = {
@@ -54,8 +67,12 @@ return {
                     enabled = false,
                 },
             },
+
+            signature = {
+                enabled = true,
+                trigger = { enabled = false },
+            },
         },
         opts_extend = { "sources.default" },
     },
-
 }
