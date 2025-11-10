@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
-# installs commonly used linux tools
-
+# installs commonly used linux tools using apt
+ 
 set -euo pipefail
 
 INVOKER="${SUDO_USER:-${USER:-unknown}}"
+
+# abstract these packages out into separate lists,
+# read arguments to decide what to install
 
 PACKAGES=(
 	sudo
@@ -52,7 +55,7 @@ PACKAGES=(
 	pulseaudio-utils
 
 	ripgrep
-    cloc
+    cloc             # count lines of code
 	fd-find          # modern 'find' command
 	fzf              # fuzzy file search
 	bat              # cat + syntax highlighting

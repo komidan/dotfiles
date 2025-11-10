@@ -54,7 +54,7 @@ vim.keymap.set('n', "<J>", "mzJ`z")
 -- easier highlight traverse
 vim.keymap.set('n', "n", "nzzzv")
 vim.keymap.set('n', "N", "Nzzzv")
-vim.keymap.set('n', "ff", ":noh<CR>")
+vim.keymap.set('n', "<C-h>", ":noh<CR>")
 
 -- unnamed register dumb, use zero register for pasting
 vim.keymap.set('n', "<C-p>", '"0p')
