@@ -19,7 +19,7 @@ vim.opt.wrap = true
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = { 80 }
-vim.opt.showmatch = true
+vim.opt.showmatch = false
 vim.opt.matchtime = 2
 vim.opt.cursorline = true
 
