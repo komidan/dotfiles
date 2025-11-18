@@ -31,7 +31,7 @@
             "branch_icon": "",
             "cache_duration": "none"
           },
-          "template": "<#525252>(<#5f4fd1>{{ .HEAD }}<#525252>)</>",
+          "template": "<#525252>(<#5f4fd1>{{ .HEAD }}<#525252>) </>",
           "foreground": "#748ed6",
           "type": "git",
           "style": "plain"
@@ -46,7 +46,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<#5f5063> ({{ .Venv }}{{ if .Error }}{{ .Error }}{{ else }} {{ .Full }}{{ end }})</>",
+          "template": "<#5f5063>({{ .Venv }}{{ if .Error }}{{ .Error }}{{ else }} {{ .Full }}{{ end }}) </>",
           "type": "python",
           "style": "powerline"
         },
@@ -54,7 +54,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "{{ if gt .Code 0 }}<#e66a7a>{{ else }}</>{{ end }}\u25b8",
+          "template": "{{ if gt .Code 0 }}<#e66a7a>{{ else }}</>{{ end }}\u203a",
           "foreground": "#FFFFFFFF",
           "type": "text",
           "style": "plain"
