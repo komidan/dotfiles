@@ -48,17 +48,23 @@ vim.opt.completeopt = {
 -- keybindings
 vim.g.mapleader = " "
 
--- i forgor
+-- deletes line break and wraps next line to current line 
 vim.keymap.set('n', "<J>", "mzJ`z")
 
 -- easier highlight traverse
 vim.keymap.set('n', "n", "nzzzv")
 vim.keymap.set('n', "N", "Nzzzv")
-vim.keymap.set('n', "<C-h>", ":noh<CR>")
+vim.keymap.set('n', "<C-h>", ":noh<CR>", { noremap = true, silent = true})
 
--- unnamed register dumb, use zero register for pasting
+-- better copy & pasting actions
+-- removes copying to clipboard using 'd' keybinds, i.e 'dd' or 'vd'
+-- use 'x' based to cut content and save to clipboard
+vim.keymap.set('n', "dd", '"_dd')
+vim.keymap.set('v', "d", '"_d')
 vim.keymap.set('n', "<C-p>", '"0p')
 vim.keymap.set('v', "<C-p>", '"0p')
+-- explicit copy to system clipboard
+vim.keymap.set('n', "<leader>y", '"+y<CR>')
 
 -- no quit?
 vim.keymap.set('n', "Q", "<nop>")
@@ -76,5 +82,9 @@ vim.keymap.set('n', "<C-u>", "<C-u>zz")
 vim.keymap.set('v', "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', "K", ":m '<-2<CR>gv=gv")
 
--- split
+-- splits
 vim.keymap.set('n', "<C-\\>", ":vsplit<CR><C-w>w")
+vim.keymap.set('n', "<C-up>", "<C-w>5-<CR>")
+vim.keymap.set('n', "<C-down>", "<C-w>5+<CR>")
+vim.keymap.set('n', "<C-left>", "<C-w>5<<CR>")
+vim.keymap.set('n', "<C-right>", "<C-w>5><CR>")

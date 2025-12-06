@@ -32,9 +32,9 @@ return {
                 group_empty_dirs = true
             }
         })
-        vim.keymap.set('n', "<C-n>", ':Neotree toggle reveal float<CR>')
-        vim.keymap.set('n', "<C-b>", ':Neotree reveal float buffers<CR>')
-        vim.keymap.set('n', "<C-g>", ':Neotree toggle right git_status<CR>')
+        vim.keymap.set('n', "<C-n>", ':Neotree toggle reveal float<CR>', {silent=true})
+        vim.keymap.set('n', "<C-b>", ':Neotree reveal float buffers<CR>', {silent=true})
+        vim.keymap.set('n', "<C-g>", ':Neotree toggle right git_status<CR>', {silent=true})
     end
 }
 
