@@ -2,8 +2,6 @@
 
 set -euo pipefail
 
-# Comment out packages if you don't want them!
-
 # REQUIRED
 PACKAGES_REQUIRED=(
     sudo
@@ -11,10 +9,10 @@ PACKAGES_REQUIRED=(
 
 # SYSTEM PACKAGES: I suggest intalling these.
 PACKAGES_SYSTEM=(
-    curl
-    wget
+    curl             # transferring data from/to a server using URLs
+    wget             # web-get, gets files from a URL
     btop             # htop alternative, system monitoring tool
-    less
+    less             # easier viewing of large terminal outputs
     vim              # neovim backup for sudo editing, nano sucks
     hwinfo           # hardware info
     fuse
@@ -25,9 +23,9 @@ PACKAGES_SYSTEM=(
 # DEVELOPMENT: All tools software for writing code/developing applications. 
 PACKAGES_DEVELOPMENT=(
     tmux             # greatest tool ever?
+    git              # why wouldn't you?
     man-db           # manpages database
     python3          # scripting
-    git              # why wouldn't you?
     build-essential  # GCC, make, libraries
     manpages-dev     # manual pages for Standard LibC
     cmake			 # build system generator
@@ -40,12 +38,13 @@ PACKAGES_QOL=(
     file             # run against a file to see what file-type it is
     tree             # displays a filesystem tree given path 
     bat              # better cat tool with syntax highlighting
-    xclip            # clipboard
+    xclip            # clipboard tool
     xsel             # clipboard tool
     ripgrep          # better grep
     cloc             # 'C'ount 'L'ines 'O'f 'C'ode
     fzf              # fuzzy find
     fd-find          # better find command
+    xxd              # hexdump alt
 )
 
 # FILES: Tooling designed to aid in file-related tasks.
@@ -65,7 +64,6 @@ PACKAGES_NETWORKING=(
     nmap             # network scanning/discovery
     tcpdump          # network traffic capturing/dumping tool
 )
-
 
 # These are required for these dotfile configuration/software to work.
 PACKAGES_DOTFILES=(
@@ -151,7 +149,7 @@ prompt_group() {
 # I NEED POWER
 if [ "$(id -u)" -ne 0 ]; then
     echo "[$0] Script needs SUDO perms to install packages."
-    echo "    SUDO $0"
+    echo "[$0] Sudo perms are revoked after the script finishes (sudo -k)"
     exit 1
 fi
 

@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
 
-DOTFILES="$HOME/dotfiles"
+DOTFILES="$HOME/dotfiles/configs"
 LOG_FILE="./log.txt"
-
-log() {
-    echo "[$(date '+%d-%b-%Y %H:%M:%S')] $1" | tee -a $LOG_FILE 
-}
 
 if ! [ -d "$DOTFILES" ]; then
     log "dotfiles dir needs to be in '$HOME/'"
     exit 1
 fi
 
-# <exe>:<source>:<dest>
+# <executable name>:<source of config>:<where to symlink to>
 DIRS=(
     "i3:$DOTFILES/i3:$HOME/.config/i3"
     "kitty:$DOTFILES/kitty:$HOME/.config/kitty"
@@ -25,27 +21,21 @@ DIRS=(
 for conf in "${DIRS[@]}"; do
     IFS=: read -r PROGRAM SRC DST <<< "$conf"
 
+    echo -e "[$PROGRAM]"
     if ! command -v "$PROGRAM" >/dev/null 2>&1; then
-        log "[$PROGRAM]"
-        log "not found or not installed, skipping"
-        log ""
+        echo "  Not found/installed. Skipping."
         continue
     fi
 
-    log "[$PROGRAM]"
-
     if [ -L "$DST" ]; then
-        log "removing old symlink '$DST'"
+        echo "  Removing old symlink."
         rm "$DST"
     elif [ -e "$DST" ]; then
-        BACKUP="${DST}_backup_$(date +%s)"
-        log "backup '$DST' -> '$BACKUP'"
+        echo "  Creating backup before linking."
         mv "$DST" "$BACKUP"
     fi
 
     # link
     ln -s "$SRC" "$DST"
-
-    log "linking '$SRC' -> '$DST'"
-    log ""
+    echo "  Linking dotfiles folder."
 done
