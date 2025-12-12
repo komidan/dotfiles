@@ -6,7 +6,7 @@
       "alignment": "left",
       "segments": [
         {
-          "options": {
+          "properties": {
             "cache_duration": "none"
           },
           "template": "{{ if .WSL }}<#e8c98b>wsl</> {{ end }}<#6c6b6e></>{{ .UserName }}@{{ .HostName }}",
@@ -15,7 +15,7 @@
           "style": "plain"
         },
         {
-          "options": {
+          "properties": {
             "cache_duration": "none",
             "folder_icon": "..",
             "home_icon": "~",
@@ -27,7 +27,7 @@
           "style": "plain"
         },
         {
-          "options": {
+          "properties": {
             "branch_icon": "",
             "cache_duration": "none"
           },
@@ -43,7 +43,7 @@
       "alignment": "left",
       "segments": [
         {
-          "options": {
+          "properties": {
             "cache_duration": "none"
           },
           "template": "<#5f5063>({{ .Venv }}{{ if .Error }}{{ .Error }}{{ else }} {{ .Full }}{{ end }}) </>",
@@ -51,7 +51,7 @@
           "style": "powerline"
         },
         {
-          "options": {
+          "properties": {
             "cache_duration": "none"
           },
           "template": "{{ if gt .Code 0 }}<#e66a7a>{{ else }}</>{{ end }}\u203a",
@@ -59,9 +59,10 @@
           "type": "text",
           "style": "plain"
         }
-      ]
+      ],
+      "newline": false 
     }
   ],
-  "version": 4,
+  "version": 3,
   "final_space": true
 }
