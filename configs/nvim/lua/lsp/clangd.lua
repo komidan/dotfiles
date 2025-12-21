@@ -5,6 +5,7 @@ vim.lsp.config["clangd"] = {
     init_options = {
         fallbackFlags = {
             "-std=c99",
+            "-x", "c",
             "-I" .. vim.fn.getcwd() .. "/inc",
             "-I" .. vim.fn.getcwd() .. "/lib",
             "-Wall",
@@ -13,3 +14,9 @@ vim.lsp.config["clangd"] = {
     },
 }
 
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+    pattern = "*.h",
+    callback = function()
+    vim.bo.filetype = "c"
+    end
+})
