@@ -30,6 +30,7 @@ PACKAGES_DEVELOPMENT=(
     manpages-dev     # manual pages for Standard LibC
     cmake			 # build system generator
     gdb				 # debugger
+    valgrind         # debugger
     python3-pip      # package manager
 )
 

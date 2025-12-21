@@ -9,6 +9,7 @@ vim.lsp.config["pylsp"] = {
                     ignore = {
                         "E501", "E305", "E302", "E261",
                         "E221", "E303", "E265", "E251",
+                        "E262"
                     },
                     maxLineLength = 120,
                  } ,
