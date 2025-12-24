@@ -1,4 +1,10 @@
 vim.lsp.config["clangd"] = {
+
+    -- Remove pesky commenting out inside #ifdefs
+    on_attach = function(client, bufnr)
+        client.server_capabilities.semanticTokensProvider = nil
+    end,
+
     cmd = { "clangd", "--background-index" },
     filetypes = { "c", "cpp" },
     root_markers = { ".git", "compile_commands.json", "compile_flags.txt" },
