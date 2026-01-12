@@ -15,6 +15,7 @@ PACKAGES_SYSTEM=(
     less             # easier viewing of large terminal outputs
     vim              # neovim backup for sudo editing, nano sucks
     hwinfo           # hardware info
+    zsh              # better shell 
     fuse
     libfuse2
     timeshift        # system restore point management
