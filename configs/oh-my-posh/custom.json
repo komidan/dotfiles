@@ -6,25 +6,25 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "path",
-          "style": "powerline",
-          "foreground": "#d3869b",
-          "properties": {
-            "style": "agnoster_short",
+          "options": {
+            "display_root": true,
             "max_depth": 1,
-            "display_root": true
-          }
+            "style": "agnoster_short"
+          },
+          "foreground": "#d3869b",
+          "type": "path",
+          "style": "powerline"
         },
         {
-          "type": "git",
-          "style": "powerline",
-          "foreground": "#83a598",
-          "properties": {
-            "fetch_status": true,
+          "options": {
             "branch_icon": "",
+            "fetch_status": true,
             "source": "cli"
           },
-          "template": "<#665c54>(</>{{ .HEAD }}<#665c54>)</> "
+          "template": "<#665c54>(</>{{ .HEAD }}<#665c54>)</> ",
+          "foreground": "#83a598",
+          "type": "git",
+          "style": "powerline"
         }
       ]
     },
@@ -33,21 +33,20 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "python",
-          "style": "powerline",
+          "template": "<#655c54>(</>{{ .Venv }}<#655c54>)</> ",
           "foreground": "#fabd2f",
-          "template": "<#655c54>(</>{{ .Venv }}<#655c54>)</> "
+          "type": "python",
+          "style": "powerline"
         },
         {
-          "type": "text",
-          "style": "plain",
+          "template": "{{ if gt .Code 0 }}<#fb4934>{{ else }}</>{{ end }}\u203a",
           "foreground": "#ddc7a1",
-          "template": "{{ if gt .Code 0 }}<#fb4934>{{ else }}</>{{ end }}\u203a"
+          "type": "text",
+          "style": "plain"
         }
-      ],
-      "newline": false 
+      ]
     }
   ],
-  "final_space": true,
-  "version": 3
+  "version": 4,
+  "final_space": true
 }
